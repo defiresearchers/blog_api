@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :article do
-    title { "MyString" }
-    content { "MyText" }
-    slug { "MyString" }
+    title { "Title #{SecureRandom.hex}" }
+    content { "Content #{SecureRandom.uuid}" }
+    slug { "Slug #{SecureRandom.alphanumeric}" }
   end
 end
