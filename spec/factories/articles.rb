@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :article do
-    title { "Title #{SecureRandom.hex}" }
-    content { "Content #{SecureRandom.uuid}" }
-    slug { "Slug #{SecureRandom.alphanumeric}" }
+    sequence(:title) { |n| "Article Title #{n}"}
+    content { "Content #{SecureRandom.uuid} #{SecureRandom.hex} #{SecureRandom.alphanumeric}" }
+    sequence(:slug) { |n| "article-title-#{n}" }
   end
 end

@@ -6,6 +6,9 @@ RSpec.describe Article, type: :model do
   describe '#validation' do
     it 'has valid factory' do
       expect(article).to be_valid
+      article.save
+      article2 = build(:article)
+      expect(article2).to be_valid
     end
 
     it 'has invalid title' do
